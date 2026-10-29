@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoa Lá - Gửi Trọn Yêu Thương Trong Từng Sắc Hoa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#e8d5ce',
+                            500: '#4a6b5d', /* Mắt lá xám xanh nhẹ nhàng */
+                            600: '#3b574a',
+                            700: '#2d4339',
+                            rose: '#d9777f',
+                            cream: '#fcfaf7',
+                            softpink: '#fceee9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        cursive: ['Dancing Script', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #fcfaf7 0%, #f7eae5 100%);
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-800 font-sans antialiased selection:bg-brand-rose selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-header border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="text-3xl font-serif font-bold text-brand-700 tracking-wider">Hoa Lá</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-brand-700 font-medium">Floral Studio</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+                <a href="#about" class="hover:text-brand-500 transition-colors">Giới Thiệu</a>
+                <a href="#story" class="hover:text-brand-500 transition-colors">Câu Chuyện</a>
+                <a href="#products" class="hover:text-brand-500 transition-colors">Bộ Sưu Tập Hoa</a>
+                <a href="#contact" class="hover:text-brand-500 transition-colors">Liên Hệ</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleCartModal()" class="relative p-2.5 rounded-full bg-brand-softpink text-brand-700 hover:bg-brand-rose hover:text-white transition-all">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-brand-rose text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">0</span>
+                </button>
+                <a href="tel:0939840488" class="hidden sm:inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-4 py-2.5 rounded-full text-sm font-medium shadow-sm transition-all">
+                    <i class="fa-solid fa-phone"></i>
+                    0939 840 488
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="about" class="pt-28 pb-16 md:pt-36 md:pb-24 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-emerald-100 text-brand-600 text-sm font-medium shadow-sm">
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Trao Cảm Xúc - Vẹn Yêu Thương</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight">
+                        Gửi Trọn Yêu Thương <br/>
+                        <span class="italic font-normal text-brand-rose">Trong Từng Sắc Hoa</span>
+                    </h1>
+                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Dù cuộc sống có bận rộn hay nhiều đổi thay, một bó hoa tươi thắm từ <strong class="text-brand-700 font-semibold">Hoa Lá</strong> sẽ luôn là cách tuyệt vời để thắp sáng ngày mới, sẻ chia cảm xúc và gìn giữ những niềm vui bình dị nhất.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <a href="#products" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-3.5 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            Khám Phá Hoa Tươi
+                        </a>
+                        <a href="https://zalo.me/84939840488" target="_blank" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 px-6 py-3.5 rounded-full font-medium flex items-center gap-2 shadow-sm transition-all">
+                            <i class="fa-solid fa-comments text-blue-500"></i>
+                            Tư Vấn Zalo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Banner Image (Ảnh 1) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-rose-200 rounded-full filter blur-3xl opacity-50"></div>
+                        <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-emerald-200 rounded-full filter blur-3xl opacity-50"></div>
+                        <div class="relative bg-white p-3 rounded-3xl shadow-2xl overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                            <img id="hero-img" 
+                                 src="https://lh3.googleusercontent.com/d/1y0f-rMEBmSSsoWKV9X1QEeIt8aRpOz1x" 
+                                 alt="Hoa Lá Intro" 
+                                 class="w-full h-[450px] object-cover rounded-2xl"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x800/e8d5ce/2d4339?text=Ti%E1%BB%87m+Hoa+L%C3%A1';">
+                            <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl border border-white/50 shadow-lg">
+                                <p class="font-serif italic text-gray-800 text-sm text-center">"Anyway... Life goes on - Tự thưởng cho mình một đóa hoa tươi."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND STORY SECTION -->
+    <section id="story" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-12">
+                <span class="text-brand-rose font-cursive text-2xl">Về Tiệm Hoa Lá</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">
+                    Nơi Những Đóa Hoa Kìm Nén Cảm Xúc Thành Lời Yêu
+                </h2>
+                <div class="w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="bg-brand-50/60 rounded-3xl p-8 sm:p-12 border border-brand-100 shadow-sm space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg">
+                <p>
+                    Khởi nguồn từ tình yêu mộc mạc với thiên nhiên, <strong class="text-brand-700">Tiệm hoa Hoa Lá</strong> ra đời không chỉ để bán những bó hoa đẹp, mà còn là người bạn đồng hành cùng bạn lưu giữ những khoảnh khắc chân thật nhất của cuộc đời.
+                </p>
+                <p>
+                    Tên gọi <strong class="text-brand-700">"Hoa Lá"</strong> gợi nhắc về sự mộc mạc, bền bỉ và hài hòa. Giống như trong một bó hoa, những chiếc lá xanh luôn lặng thầm tôn lên vẻ rực rỡ của những cánh hoa, thì ở tiệm của chúng tôi, mỗi sản phẩm làm ra đều chứa đựng sự tỉ mỉ, chăm chút để thay bạn nói lên những lời khó diễn đạt thành lời.
+                </p>
+                <div class="p-6 bg-white rounded-2xl border-l-4 border-brand-500 shadow-sm italic text-gray-800">
+                    "Với thông điệp chủ đạo <span class="font-semibold text-brand-rose">‘Anyway... Life goes on’</span>, Hoa Lá tin rằng: Dẫu ngoài kia cuộc sống có những lúc bộn bề, thăng trầm, thì việc dừng lại một chút, tặng bản thân hay người thương một đóa hoa tươi chính là cách tự chữa lành."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS CATALOG -->
+    <section id="products" class="py-20 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-brand-rose font-cursive text-2xl">Sản Phẩm Nổi Bật</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900 mt-1">Bộ Sưu Tập Đóa Hoa Yêu Thương</h2>
+                </div>
+                <p class="text-gray-500 text-sm mt-2 md:mt-0">Chọn lựa những mẫu hoa tươi thiết kế độc đáo nhất cho mọi dịp đặc biệt</p>
+            </div>
+
+            <!-- Product Grid (11 Products) -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Javascript will render products dynamically here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <footer id="contact" class="bg-brand-700 text-white pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-emerald-800/80 pb-12">
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-serif font-bold text-emerald-100">Hoa Lá Studio</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Chuyên thiết kế hoa tươi sự kiện, hoa sinh nhật, hoa chúc mừng, hoa cưới và điện hoa tận nơi tại Cần Thơ & khu vực lân cận.
+                    </p>
+                    <p class="text-xs text-rose-200 italic">"Anyway... Life goes on"</p>
+                </div>
+
+                <!-- Col 2: Contact Info -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-bold text-emerald-200 mb-2">Thông Liên Hệ</h4>
+                    <p class="flex items-start gap-3 text-sm text-gray-300">
+                        <i class="fa-solid fa-location-dot mt-1 text-rose-300"></i>
+                        <span>43/6 Trà Nóc, TP. Cần Thơ</span>
+                    </p>
+                    <p class="flex items-center gap-3 text-sm text-gray-300">
+                        <i class="fa-solid fa-phone text-rose-300"></i>
+                        <a href="tel:0939840488" class="hover:underline">0939 840 488</a>
+                    </p>
+                    <p class="flex items-center gap-3 text-sm text-gray-300">
+                        <i class="fa-solid fa-envelope text-rose-300"></i>
+                        <a href="mailto:nguyenthigiauvnh5@gmail.com" class="hover:underline break-all">nguyenthigiauvnh5@gmail.com</a>
+                    </p>
+                </div>
+
+                <!-- Col 3: Social Networks -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-bold text-emerald-200 mb-2">Kênh An Ninh & Mạng Xã Hội</h4>
+                    <div class="flex flex-col space-y-2 text-sm text-gray-300">
+                        <a href="https://zalo.me/84939840488" target="_blank" class="hover:text-white flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold">Z</span>
+                            Zalo: 0939840488
+                        </a>
+                        <a href="https://www.facebook.com/giau.nguyen.946536" target="_blank" class="hover:text-white flex items-center gap-2">
+                            <i class="fa-brands fa-facebook text-blue-400 text-lg"></i>
+                            Facebook Nguyễn Giàu
+                        </a>
+                        <a href="https://www.tiktok.com/@wealthy1992" target="_blank" class="hover:text-white flex items-center gap-2">
+                            <i class="fa-brands fa-tiktok text-gray-100 text-lg"></i>
+                            TikTok @wealthy1992
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 4: Service Commitment -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-bold text-emerald-200 mb-2">Cam Kết Tiệm Hoa</h4>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Hoa tươi 100% tuyển chọn trong ngày</li>
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Giao hoa nhanh chóng, đúng hẹn</li>
+                        <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Xuất hóa đơn VAT cho DN / Công ty</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-gray-400">
+                <p>&copy; 2026 Tiệm Hoa Lá Cần Thơ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART & ORDER MODAL -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="toggleCartModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-600 text-xl w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="text-2xl font-serif font-bold text-gray-900 border-b pb-4 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-cart-shopping text-brand-500"></i>
+                Đơn Hàng Của Bạn
+            </h3>
+
+            <!-- Cart Items List -->
+            <div id="cart-items" class="space-y-4 mb-6">
+                <!-- Rendered dynamically -->
+            </div>
+
+            <!-- Total Price -->
+            <div class="flex justify-between items-center py-3 border-t border-b font-semibold text-lg mb-6">
+                <span>Tổng tiền thanh toán:</span>
+                <span id="cart-total-price" class="text-brand-rose text-xl font-bold">0 đ</span>
+            </div>
+
+            <!-- ORDER FORM -->
+            <form id="order-form" onsubmit="handleOrderSubmit(event)" class="space-y-4">
+                <h4 class="font-bold text-gray-800 text-base border-l-4 border-brand-500 pl-2">Thông Tin Nhận Hoa</h4>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 mb-1">Họ và tên *</label>
+                        <input type="text" id="cust-name" required placeholder="Nguyễn Văn A" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 mb-1">Số điện thoại *</label>
+                        <input type="tel" id="cust-phone" required placeholder="09xxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Địa chỉ giao hoa *</label>
+                    <input type="text" id="cust-address" required placeholder="Số nhà, tên đường, phường/xã, quận/huyện" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Ghi chú đơn hàng (Thời gian giao, thông điệp thiệp...)</label>
+                    <textarea id="cust-note" rows="2" placeholder="Nhập ghi chú hoặc lời chúc..." class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm"></textarea>
+                </div>
+
+                <!-- VAT INVOICE CHECKBOX & FIELDS -->
+                <div class="pt-2 border-t">
+                    <label class="flex items-center gap-2 cursor-pointer select-none">
+                        <input type="checkbox" id="need-invoice" onchange="toggleInvoiceFields(this.checked)" class="rounded text-brand-500 focus:ring-brand-500 w-4 h-4">
+                        <span class="text-sm font-medium text-gray-700">Yêu cầu xuất hóa đơn VAT (Doanh nghiệp)</span>
+                    </label>
+                </div>
+
+                <div id="invoice-fields" class="hidden space-y-3 bg-gray-50 p-4 rounded-2xl border border-gray-200">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 mb-1">Tên Doanh Nghiệp *</label>
+                        <input type="text" id="inv-company" placeholder="Công ty TNHH..." class="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm focus:outline-none">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 mb-1">Mã Số Thuế *</label>
+                            <input type="text" id="inv-tax" placeholder="Mã số thuế" class="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-600 mb-1">Email Nhận Hóa Đơn *</label>
+                            <input type="email" id="inv-email" placeholder="ketoan@company.com" class="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 mb-1">Địa chỉ doanh nghiệp *</label>
+                        <input type="text" id="inv-address" placeholder="Địa chỉ đăng ký giấy phép KD" class="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button type="submit" id="btn-submit-order" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-medium py-3.5 rounded-2xl shadow-lg transition-all flex items-center justify-center gap-2 text-base">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Xác Nhận Đặt Hoa Tươi</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION MODAL -->
+    <div id="msg-box" class="fixed top-5 right-5 z-50 bg-white shadow-2xl rounded-2xl p-4 border-l-4 border-brand-500 hidden transform transition-all duration-300 max-w-sm">
+        <div class="flex items-center gap-3">
+            <i id="msg-icon" class="fa-solid fa-circle-check text-brand-500 text-2xl"></i>
+            <div>
+                <p id="msg-title" class="font-bold text-sm text-gray-800">Thông báo</p>
+                <p id="msg-text" class="text-xs text-gray-600 mt-0.5">Nội dung thông báo</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        /*
+          LƯU Ý: Thay URL bên dưới bằng App Script Web App URL của bạn sau khi deploy thành công Google Sheet App Script.
+        */
+        const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz2dqqUntmKZ-f1SZyCIN7WFAGMH5oGkMwrqqXOmSDdFz7fOAXLUZPx0l2be5OydH0/exec";
+
+        // Danh sách sản phẩm hoa tươi với đầy đủ 11 ảnh đã được cung cấp
+        const productsList = [
+            { id: 2, name: "Nắng Sớm - Bó Hoa Cúc Tươi", price: 380000, img: "https://lh3.googleusercontent.com/d/1bWNtpQZbTpUgG3DvfqDAkzl56SUMhRG0", desc: "Sắc vàng tươi tắn xua tan mệt mỏi, gửi gắm năng lượng tích cực." },
+            { id: 3, name: "Yêu Thương Nhẹ Nhàng", price: 450000, img: "https://lh3.googleusercontent.com/d/1iqZ6-uPYy1hOncuENiBAJXXtjiEaLNPK", desc: "Tông hồng pastel dịu ngọt, thể hiện tình yêu chân thành và dịu êm." },
+            { id: 4, name: "Bình Yên Ngày Mới", price: 520000, img: "https://lh3.googleusercontent.com/d/16kEYfpCFBBjoCwSfn7wRM6zie4aCVfVO", desc: "Sự kết hợp tinh tế giữa hoa hồng và lá phụ xanh tươi mát." },
+            { id: 5, name: "Rực Rỡ Tuổi Trẻ", price: 490000, img: "https://lh3.googleusercontent.com/d/1tTU6X9Rz2yZ58k2sDFosL5q-Eiut6FMl", desc: "Tone màu sống động mang lại niềm vui bất ngờ cho người nhận." },
+            { id: 6, name: "Nét Đẹp Tinh Khôi", price: 420000, img: "https://lh3.googleusercontent.com/d/1wgjAtixA1ZbPyRuGK0iUBKmVABxFLta1", desc: "Cánh hoa mỏng manh, thuần khiết tôn vinh vẻ đẹp tự nhiên." },
+            { id: 7, name: "Lời Hẹn Thề", price: 650000, img: "https://lh3.googleusercontent.com/d/1wUbwkVQj8zJibYJfy0j6fAERTGdABq8o", desc: "Bó hoa thiết kế sang trọng cho dịp kỷ niệm ngọt ngào." },
+            { id: 8, name: "Sắc Màu Hạnh Phúc", price: 580000, img: "https://lh3.googleusercontent.com/d/1_FEa6ELCivEwyb4HGHcjBEV6VN4Xbako", desc: "Sự hòa quyện màu sắc đa dạng đầy sức sống và tinh tế." },
+            { id: 9, name: "Ngọt Ngào Đam Mê", price: 600000, img: "https://lh3.googleusercontent.com/d/19U8An9wJqgT_ejdl19J6zOME1k27H8gT", desc: "Hoa hồng đỏ thắm thay lời muốn nói trao gửi người yêu dấu." },
+            { id: 10, name: "Mộng Mơ Pastel", price: 470000, img: "https://lh3.googleusercontent.com/d/1w_7APqMdw3i5SROiMpNg66DvvGD3_G1T", desc: "Phong cách cắm hoa hiện đại, thanh lịch chuẩn Hàn Quốc." },
+            { id: 11, name: "Ánh Dương Ấm Áp", price: 550000, img: "https://lh3.googleusercontent.com/d/1KBQwuROfJOLBfdcNr2PXMkeO4bUAMDAb", desc: "Sắc cam hồng rạng rỡ mang lại cảm giác ấm áp, bình yên." },
+            { id: 12, name: "Hoa Thơ Dịu Dàng", price: 510000, img: "https://lh3.googleusercontent.com/d/1MZ5jFLSUSlr5lDWazVDdpQL5rwV7Qi0a", desc: "Tỉ mỉ từng nhành lá, gửi trọn tâm tình trong từng cánh hoa." }
+        ];
+
+        let cart = [];
+
+        // Render sản phẩm ra giao diện
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = productsList.map(p => `
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square bg-gray-50">
+                            <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x400/e8d5ce/2d4339?text=Hoa+L%C3%A1';">
+                            <button onclick="addToCart(${p.id})" class="absolute bottom-3 right-3 bg-white/90 hover:bg-brand-500 hover:text-white text-brand-700 w-11 h-11 rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300">
+                                <i class="fa-solid fa-plus text-base"></i>
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-gray-800 text-lg group-hover:text-brand-500 transition-colors line-clamp-1">${p.name}</h3>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">${p.desc}</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0 flex items-center justify-between border-t border-gray-50 mt-2">
+                        <span class="text-brand-rose font-bold text-lg">${p.price.toLocaleString('vi-VN')} đ</span>
+                        <button onclick="addToCart(${p.id})" class="text-xs font-semibold text-brand-500 hover:text-brand-700 underline">
+                            Thêm vào giỏ
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Thêm vào giỏ hàng
+        function addToCart(productId) {
+            const product = productsList.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            updateCartUI();
+            showNotification('Thành công', `Đã thêm "${product.name}" vào giỏ hàng.`);
+        }
+
+        // Thay đổi số lượng
+        function updateQty(productId, delta) {
+            const item = cart.find(i => i.id === productId);
+            if (!item) return;
+
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== productId);
+            }
+            updateCartUI();
+        }
+
+        // Cập nhật UI giỏ hàng
+        function updateCartUI() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total-price');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            cartCount.innerText = totalItems;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `<p class="text-center text-gray-400 py-8">Giỏ hàng đang trống. Hãy chọn đóa hoa bạn yêu thích nhé!</p>`;
+                cartTotal.innerText = '0 đ';
+                return;
+            }
+
+            let grandTotal = 0;
+            cartItems.innerHTML = cart.map(item => {
+                const subtotal = item.price * item.qty;
+                grandTotal += subtotal;
+                return `
+                    <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-2xl border border-gray-100">
+                        <img src="${item.img}" class="w-16 h-16 object-cover rounded-xl" onerror="this.onerror=null; this.src='https://placehold.co/100x100/e8d5ce/2d4339?text=Hoa';">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-medium text-gray-800 text-sm truncate">${item.name}</h4>
+                            <p class="text-xs text-brand-rose font-bold mt-0.5">${item.price.toLocaleString('vi-VN')} đ</p>
+                        </div>
+                        <div class="flex items-center border bg-white rounded-lg">
+                            <button onclick="updateQty(${item.id}, -1)" class="px-2.5 py-1 text-gray-500 hover:bg-gray-100 rounded-l-lg">-</button>
+                            <span class="px-3 text-xs font-semibold">${item.qty}</span>
+                            <button onclick="updateQty(${item.id}, 1)" class="px-2.5 py-1 text-gray-500 hover:bg-gray-100 rounded-r-lg">+</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            cartTotal.innerText = grandTotal.toLocaleString('vi-VN') + ' đ';
+        }
+
+        // Bật/Tắt Modal Giỏ hàng
+        function toggleCartModal() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        // Hiện/Ẩn hóa đơn VAT
+        function toggleInvoiceFields(checked) {
+            const invoiceFields = document.getElementById('invoice-fields');
+            if (checked) {
+                invoiceFields.classList.remove('hidden');
+            } else {
+                invoiceFields.classList.add('hidden');
+            }
+        }
+
+        // Hiển thị Toast Notification
+        function showNotification(title, message, isError = false) {
+            const box = document.getElementById('msg-box');
+            const icon = document.getElementById('msg-icon');
+            document.getElementById('msg-title').innerText = title;
+            document.getElementById('msg-text').innerText = message;
+
+            if (isError) {
+                box.classList.replace('border-brand-500', 'border-red-500');
+                icon.className = 'fa-solid fa-circle-exclamation text-red-500 text-2xl';
+            } else {
+                box.classList.replace('border-red-500', 'border-brand-500');
+                icon.className = 'fa-solid fa-circle-check text-brand-500 text-2xl';
+            }
+
+            box.classList.remove('hidden');
+            setTimeout(() => {
+                box.classList.add('hidden');
+            }, 3500);
+        }
+
+        // Xử lý gửi Đơn hàng
+        async function handleOrderSubmit(e) {
+            e.preventDefault();
+
+            if (cart.length === 0) {
+                showNotification('Chú ý', 'Giỏ hàng của bạn đang trống!', true);
+                return;
+            }
+
+            const btnSubmit = document.getElementById('btn-submit-order');
+            btnSubmit.disabled = true;
+            btnSubmit.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Đang xử lý...`;
+
+            // Chuẩn bị chi tiết sản phẩm
+            const orderDetails = cart.map(i => `${i.name} (x${i.qty})`).join(', ');
+            const totalQty = cart.reduce((sum, i) => sum + i.qty, 0);
+            const totalPrice = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+
+            const needInvoice = document.getElementById('need-invoice').checked;
+
+            const payload = {
+                customerName: document.getElementById('cust-name').value,
+                phone: document.getElementById('cust-phone').value,
+                address: document.getElementById('cust-address').value,
+                note: document.getElementById('cust-note').value,
+                orderDetails: orderDetails,
+                totalQty: totalQty,
+                totalPrice: totalPrice,
+                needInvoice: needInvoice ? 'Có' : 'Không',
+                companyName: needInvoice ? document.getElementById('inv-company').value : '',
+                taxCode: needInvoice ? document.getElementById('inv-tax').value : '',
+                invoiceEmail: needInvoice ? document.getElementById('inv-email').value : '',
+                companyAddress: needInvoice ? document.getElementById('inv-address').value : ''
+            };
+
+            try {
+                if (GOOGLE_APPS_SCRIPT_URL && GOOGLE_APPS_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
+                    await fetch(GOOGLE_APPS_SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                } else {
+                    console.warn("Chưa cấu hình Google Apps Script URL. Đơn hàng lưu tại local.");
+                }
+
+                showNotification('Thành công', 'Đơn hàng của bạn đã được gửi tới Tiệm Hoa Lá!');
+                cart = [];
+                updateCartUI();
+                document.getElementById('order-form').reset();
+                toggleInvoiceFields(false);
+                toggleCartModal();
+
+            } catch (err) {
+                console.error(err);
+                showNotification('Lỗi', 'Không thể kết nối máy chủ, vui lòng liên hệ Zalo 0939840488', true);
+            } finally {
+                btnSubmit.disabled = false;
+                btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>Xác Nhận Đặt Hoa Tươi</span>`;
+            }
+        }
+
+        // Khởi chạy khi load trang
+        window.onload = function() {
+            renderProducts();
+        };
+    </script>
+</body>
+</html>
